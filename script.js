@@ -15,6 +15,7 @@ const grandTotal = document.getElementById("grandTotal");
 const phoneNumber = document.getElementById("phone");
 const submitBtn = document.getElementById("submit");
 const discountPrice = document.getElementById("discount");
+const bookedSeat = document.getElementById("bookedSeat");
 
 for (const seat of seatNumber) {
   seat.addEventListener("click", function (e) {
@@ -41,8 +42,8 @@ for (const seat of seatNumber) {
     totalSeat.innerText = data.totalSeat;
     total.innerText = data.totalTk;
     grandTotal.innerText = data.totalTk;
+    bookedSeat.innerText = seatBooked;
 
-    console.log(seatBooked);
 
     if (seatBooked >= 4) {
       for (const seat of seatNumber) {
@@ -85,5 +86,3 @@ phoneNumber.addEventListener("input", function () {
     submitBtn.disabled = tableDataue;
   }
 });
-
-
