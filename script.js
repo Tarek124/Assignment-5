@@ -87,3 +87,6 @@ phoneNumber.addEventListener("input", function () {
     submitBtn.disabled = tableDataue;
   }
 });
+function cls() {
+  window.location.reload();
+}
