@@ -19,6 +19,7 @@ const bookedSeat = document.getElementById("bookedSeat");
 
 for (const seat of seatNumber) {
   seat.addEventListener("click", function (e) {
+    seat.disabled = true;
     seat.style.backgroundColor = "#1DD100";
     seat.style.color = "white";
 
@@ -44,7 +45,6 @@ for (const seat of seatNumber) {
     grandTotal.innerText = data.totalTk;
     bookedSeat.innerText = seatBooked;
 
-
     if (seatBooked >= 4) {
       for (const seat of seatNumber) {
         seat.disabled = true;
@@ -57,6 +57,7 @@ for (const seat of seatNumber) {
 
 discountBtn.addEventListener("click", function () {
   const coupon = discountInput.value;
+
   if (coupon === "NEW15" || coupon === "Couple 20") {
     if (coupon === "NEW15") {
       const discount = data.totalTk * 0.15;
